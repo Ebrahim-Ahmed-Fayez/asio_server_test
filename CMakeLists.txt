@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22)
+project(my_project LANGUAGES C CXX)
+add_executable(exec main.cpp)
+find_package(asio CONFIG REQUIRED)
+target_link_libraries(exec PRIVATE asio::asio)
